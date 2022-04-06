@@ -12,9 +12,7 @@ func main() {
 
 	aplicacao := app.Gerar()
 
-	erro := aplicacao.Run(os.Args)
-
-	if erro != nil {
+	if erro := aplicacao.Run(os.Args); erro != nil {
 		log.Fatal(erro)
 	}
 }
